@@ -122,10 +122,58 @@ export const education = [
   }
 ];
 
+export const certifications = [
+  {
+    id: 1,
+    title: "Full Stack Web Development",
+    issuer: "Coursera",
+    issueDate: "2024",
+    credentialId: "CERT-FS-2024-001",
+    description: "Comprehensive certification covering modern full-stack development including React, Node.js, MongoDB, and deployment strategies. Completed hands-on projects demonstrating proficiency in building scalable web applications.",
+    skills: ["React.js", "Node.js", "MongoDB", "Express.js", "REST APIs"],
+    image: "https://images.unsplash.com/photo-1496065187959-7f07b8353c55?auto=format&fit=crop&w=800&q=80",
+    verifyUrl: "#"
+  },
+  {
+    id: 2,
+    title: "JavaScript Algorithms & Data Structures",
+    issuer: "freeCodeCamp",
+    issueDate: "2024",
+    credentialId: "FCC-JS-2024-VN",
+    description: "Mastered fundamental programming concepts, ES6+ syntax, regular expressions, debugging, and data structures. Completed 300+ hours of coding challenges and algorithm implementations.",
+    skills: ["JavaScript", "ES6+", "Algorithms", "Data Structures", "Problem Solving"],
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
+    verifyUrl: "#"
+  },
+  {
+    id: 3,
+    title: "Responsive Web Design",
+    issuer: "freeCodeCamp",
+    issueDate: "2023",
+    credentialId: "FCC-RWD-2023-VN",
+    description: "Learned HTML5, CSS3, Flexbox, CSS Grid, and responsive design principles. Built multiple responsive projects including tribute pages, survey forms, and landing pages.",
+    skills: ["HTML5", "CSS3", "Flexbox", "CSS Grid", "Responsive Design"],
+    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80",
+    verifyUrl: "#"
+  },
+  {
+    id: 4,
+    title: "Python for Data Science",
+    issuer: "IBM",
+    issueDate: "2024",
+    credentialId: "IBM-PY-DS-2024",
+    description: "Learned Python fundamentals, data manipulation with Pandas, data visualization with Matplotlib, and basic machine learning concepts. Completed real-world data analysis projects.",
+    skills: ["Python", "Pandas", "NumPy", "Matplotlib", "Data Analysis"],
+    image: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=800&q=80",
+    verifyUrl: "#"
+  }
+];
+
 export const navItems = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
+  { label: "Certifications", href: "#certifications" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" }
 ];
