@@ -1,19 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ExternalLink, Github, ChevronRight } from 'lucide-react';
 import { projects } from '../data/mock';
 import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from './ui/dialog';
 
 const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState(null);
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const navigate = useNavigate();
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -33,11 +25,6 @@ const Projects = () => {
 
     return () => observer.disconnect();
   }, []);
-
-  const openProjectDetails = (project) => {
-    setSelectedProject(project);
-    setIsDialogOpen(true);
-  };
 
   return (
     <section
@@ -76,7 +63,7 @@ const Projects = () => {
             >
               <div
                 className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer"
-                onClick={() => openProjectDetails(project)}
+                onClick={() => navigate(`/project/${project.id}`)}
               >
                 {/* Project Image */}
                 <div className="relative h-64 overflow-hidden">
@@ -89,32 +76,28 @@ const Projects = () => {
                   
                   {/* Overlay Actions */}
                   <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0">
-                    <Badge className="bg-white/90 text-gray-900 hover:bg-white">
+                    <span className="px-3 py-1 bg-white/90 text-gray-900 rounded-full text-sm font-medium">
                       {project.category}
-                    </Badge>
+                    </span>
                     <div className="flex gap-2">
-                      <Button
-                        size="icon"
-                        variant="secondary"
-                        className="bg-white/90 hover:bg-white rounded-full w-10 h-10"
+                      <button
+                        className="w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transition-colors"
                         onClick={(e) => {
                           e.stopPropagation();
                           window.open(project.github, '_blank');
                         }}
                       >
-                        <Github size={18} />
-                      </Button>
-                      <Button
-                        size="icon"
-                        variant="secondary"
-                        className="bg-white/90 hover:bg-white rounded-full w-10 h-10"
+                        <Github size={18} className="text-gray-700" />
+                      </button>
+                      <button
+                        className="w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transition-colors"
                         onClick={(e) => {
                           e.stopPropagation();
                           window.open(project.live, '_blank');
                         }}
                       >
-                        <ExternalLink size={18} />
-                      </Button>
+                        <ExternalLink size={18} className="text-gray-700" />
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -127,7 +110,7 @@ const Projects = () => {
                   <p className="text-gray-600 mb-4 line-clamp-2">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech.slice(0, 4).map((tech) => (
                       <span
                         key={tech}
@@ -141,6 +124,12 @@ const Projects = () => {
                         +{project.tech.length - 4} more
                       </span>
                     )}
+                  </div>
+                  
+                  {/* View Details Link */}
+                  <div className="flex items-center text-pink-500 text-sm font-medium group-hover:translate-x-1 transition-transform">
+                    View Details
+                    <ChevronRight size={16} className="ml-1" />
                   </div>
                 </div>
               </div>
@@ -159,81 +148,6 @@ const Projects = () => {
           </Button>
         </div>
       </div>
-
-      {/* Project Detail Dialog */}
-      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
-          {selectedProject && (
-            <>
-              <DialogHeader>
-                <DialogTitle className="text-2xl font-bold" style={{ fontFamily: 'Playfair Display, serif' }}>
-                  {selectedProject.title}
-                </DialogTitle>
-                <DialogDescription className="text-gray-600">
-                  {selectedProject.category}
-                </DialogDescription>
-              </DialogHeader>
-
-              <div className="space-y-6">
-                <img
-                  src={selectedProject.image}
-                  alt={selectedProject.title}
-                  className="w-full h-64 object-cover rounded-xl"
-                />
-
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">About the Project</h4>
-                  <p className="text-gray-600">{selectedProject.longDescription}</p>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Key Features</h4>
-                  <ul className="space-y-2">
-                    {selectedProject.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-gray-600">
-                        <ChevronRight size={16} className="text-pink-500 mt-1 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Technologies Used</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {selectedProject.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="flex gap-4 pt-4">
-                  <Button
-                    className="flex-1 bg-gray-900 hover:bg-gray-800 text-white rounded-full py-6"
-                    onClick={() => window.open(selectedProject.github, '_blank')}
-                  >
-                    <Github size={18} className="mr-2" />
-                    View Code
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="flex-1 border-2 rounded-full py-6"
-                    onClick={() => window.open(selectedProject.live, '_blank')}
-                  >
-                    <ExternalLink size={18} className="mr-2" />
-                    Live Demo
-                  </Button>
-                </div>
-              </div>
-            </>
-          )}
-        </DialogContent>
-      </Dialog>
 
       <style jsx>{`
         .reveal.animate-in {
