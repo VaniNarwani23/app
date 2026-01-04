@@ -1,5 +1,10 @@
-// Mock data for Vani Narwani's Portfolio
-
+import avatar from '../assets/avatar.png';
+import ecom from '../assets/ecomProj.png';
+import deliotte from '../assets/deliotte.png';
+import int from '../assets/innobimb infotech.png'
+import med from '../assets/Medicare.png';
+import Micro from '../assets/Microsoft Certificate Vani Narwani.png';
+import Scrap from '../assets/scrapping udemy .png'
 export const personalInfo = {
   name: "Vani Narwani",
   firstName: "Vani",
@@ -7,16 +12,15 @@ export const personalInfo = {
   title: "Full Stack Developer",
   tagline: "Crafting digital experiences that blend creativity with code.",
   description: "I transform ideas into elegant, functional web applications. With a passion for both frontend aesthetics and backend logic, I create seamless digital experiences that users love.",
-  avatar: "https://customer-assets.emergentagent.com/job_creative-showcase-294/artifacts/v5t14llh_ChatGPT%20Image%20Jan%203%2C%202026%2C%2003_51_20%20PM.png",
+  avatar: avatar,
   location: "Bhopal, India",
   email: "vaninarwani@gmail.com",
-  phone: "+91 9329514201",
-  resumeUrl: "https://customer-assets.emergentagent.com/job_creative-showcase-294/artifacts/1rm02oi2_Vani%20Narwani%20Resume%202025.pdf"
+  resumeUrl: "https://drive.google.com/file/d/1nIc5oQTE4uvmCNm08uxBXKb30SyhUT5m/view?usp=sharing"
 };
 
 export const socialLinks = {
-  linkedin: "https://linkedin.com/in/vaninarwani",
-  github: "https://github.com/vaninarwani",
+  linkedin: "https://www.linkedin.com/in/vani-narwani-50a239274/",
+  github: "https://github.com/VaniNarwani23",
   email: "mailto:vaninarwani@gmail.com"
 };
 
@@ -28,17 +32,17 @@ export const aboutContent = {
 
 export const skills = {
   frontend: [
-    { name: "React.js", level: 90 },
-    { name: "TypeScript", level: 85 },
-    { name: "Tailwind CSS", level: 95 },
-    { name: "GSAP", level: 75 },
-    { name: "JavaScript", level: 90 }
+    { name: "React.js", level: 100 },
+    { name: "TypeScript", level: 100 },
+    { name: "Tailwind CSS", level: 100 },
+    { name: "GSAP", level: 100 },
+    { name: "JavaScript", level: 100 }
   ],
   backend: [
-    { name: "Node.js", level: 85 },
-    { name: "MongoDB", level: 80 },
-    { name: "REST APIs", level: 88 },
-    { name: "Python", level: 75 }
+    { name: "Node.js", level: 100 },
+    { name: "MongoDB", level: 100 },
+    { name: "REST APIs", level: 100 },
+    { name: "Python", level: 100 }
   ],
   tools: ["Git & GitHub", "VS Code", "Vite", "Replit", "Selenium", "BS4"]
 };
@@ -59,10 +63,10 @@ export const projects = [
     category: "Full Stack",
     description: "A responsive full-stack e-commerce platform with dynamic routing, cart system, custom filtering, and secure MongoDB integration.",
     longDescription: "Built a comprehensive e-commerce solution featuring user authentication, product management, shopping cart functionality, and payment integration. Enhanced UI/UX with smooth animations, category filtering, and search optimization.",
-    image: "https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800",
+    image: ecom,
     tech: ["React.js", "Tailwind CSS", "Node.js", "MongoDB", "JavaScript", "Git"],
-    github: "https://github.com/vaninarwani/ecom-store",
-    live: "#",
+    github: "https://github.com/VaniNarwani23/TheEcomStore",
+    live: "https://theecomstorebyvani.netlify.app/",
     features: [
       "Responsive design across all devices",
       "Dynamic product filtering & search",
@@ -76,10 +80,10 @@ export const projects = [
     category: "Healthcare",
     description: "A healthcare web application enhancing rural medical access with hospital locator, emergency services, and telemedicine support.",
     longDescription: "Developed a mobile-first healthcare platform to improve medical accessibility in rural areas. Features include real-time hospital locator, emergency service integration, telemedicine support, and Medicare plan comparison tools.",
-    image: "https://images.pexels.com/photos/8383884/pexels-photo-8383884.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: med,
     tech: ["React.js", "Tailwind CSS", "Node.js", "MongoDB", "TypeScript", "Git"],
-    github: "https://github.com/vaninarwani/rural-medicare",
-    live: "#",
+    github: "https://github.com/VaniNarwani23/Medicare",
+    live: "https://ruralmedicareweb.netlify.app/",
     features: [
       "Hospital & clinic locator",
       "Emergency service integration",
@@ -125,47 +129,47 @@ export const education = [
 export const certifications = [
   {
     id: 1,
-    title: "Full Stack Web Development",
-    issuer: "Coursera",
-    issueDate: "2024",
-    credentialId: "CERT-FS-2024-001",
+    title: "Full Stack Developer",
+    issuer: "Innobimb Infotech",
+    issueDate: "2025",
+    credentialId: "IBI-250157",
     description: "Comprehensive certification covering modern full-stack development including React, Node.js, MongoDB, and deployment strategies. Completed hands-on projects demonstrating proficiency in building scalable web applications.",
     skills: ["React.js", "Node.js", "MongoDB", "Express.js", "REST APIs"],
-    image: "https://images.unsplash.com/photo-1496065187959-7f07b8353c55?auto=format&fit=crop&w=800&q=80",
-    verifyUrl: "#"
+    image: int,
+    verifyUrl:"https://drive.google.com/file/d/1pM9dofO0ELPQXTCmI_o7N97X_Bl9Gj1o/view?usp=sharing"
+
   },
   {
     id: 2,
-    title: "JavaScript Algorithms & Data Structures",
-    issuer: "freeCodeCamp",
-    issueDate: "2024",
-    credentialId: "FCC-JS-2024-VN",
+    title: "Deliotte Virtual Internship",
+    issuer: "Forage",
+    issueDate: "2025",
+    credentialId: "zCeR5iouWByexSPj8",
     description: "Mastered fundamental programming concepts, ES6+ syntax, regular expressions, debugging, and data structures. Completed 300+ hours of coding challenges and algorithm implementations.",
     skills: ["JavaScript", "ES6+", "Algorithms", "Data Structures", "Problem Solving"],
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
-    verifyUrl: "#"
+    image: deliotte,
+    verifyUrl: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/udmxiyHeqYQLkTPvf_9PBTqmSxAf6zZTseP_TD5GtQLj3xLu7ySSb_1750656435308_completion_certificate.pdf"
   },
   {
     id: 3,
-    title: "Responsive Web Design",
-    issuer: "freeCodeCamp",
-    issueDate: "2023",
-    credentialId: "FCC-RWD-2023-VN",
+    title: "Web development Workshop by Microsoft learn student ambassador",
+    issuer: "Microsoft Learn Student Ambassadors",
+    issueDate: "2024",
     description: "Learned HTML5, CSS3, Flexbox, CSS Grid, and responsive design principles. Built multiple responsive projects including tribute pages, survey forms, and landing pages.",
     skills: ["HTML5", "CSS3", "Flexbox", "CSS Grid", "Responsive Design"],
-    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80",
-    verifyUrl: "#"
+    image: Micro,
+    verifyUrl:"https://drive.google.com/file/d/1rHlf-YevOrcxQCnouPatS-WkQQli-8ci/view?usp=sharing"
   },
   {
     id: 4,
-    title: "Python for Data Science",
-    issuer: "IBM",
-    issueDate: "2024",
+    title: "Master Python Web Scraping & Automation using BS4 & Selenium",
+    issuer: "Udemy",
+    issueDate: "2025",
     credentialId: "IBM-PY-DS-2024",
-    description: "Learned Python fundamentals, data manipulation with Pandas, data visualization with Matplotlib, and basic machine learning concepts. Completed real-world data analysis projects.",
-    skills: ["Python", "Pandas", "NumPy", "Matplotlib", "Data Analysis"],
-    image: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=800&q=80",
-    verifyUrl: "#"
+    description: " Built high-performance scrapers with BeautifulSoup4 to extract and analyze data at scale.Leveraged Selenium to automate repetitive tasks and handle dynamic web content. Learned to bypass common restrictions and build resilient scraping solutions.",
+    skills: ["Python", "Web Scrapping", "BS4", "Selenium"],
+    image: Scrap,
+    verifyUrl: "https://www.udemy.com/certificate/UC-87600b58-b023-4992-911f-978e798a016b/"
   }
 ];
 

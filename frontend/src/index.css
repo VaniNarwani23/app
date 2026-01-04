@@ -41,10 +41,27 @@ html {
   background: #9ca3af;
 }
 
+.dark ::-webkit-scrollbar-track {
+  background: #1a202c;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #4a5568;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #718096;
+}
+
 /* Selection color */
 ::selection {
   background: #fbcfe8;
   color: #1f2937;
+}
+
+.dark ::selection {
+  background: #a855f7;
+  color: #f3f4f6;
 }
 
 /* Progress bar indicator color */

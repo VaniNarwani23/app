@@ -9,15 +9,18 @@ import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { Toaster } from './components/ui/toaster';
+import Certifications from './components/Certifications';
+import AllProjects from './components/AllProjects';
 
 const Portfolio = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-gray-950">
       <Navbar />
       <main>
         <Hero />
         <About />
         <Projects />
+        <Certifications />
         <Experience />
         <Contact />
       </main>
@@ -33,6 +36,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Portfolio />} />
+          <Route path="/projects" element={<AllProjects />} />
           <Route path="*" element={<Portfolio />} />
         </Routes>
       </BrowserRouter>
