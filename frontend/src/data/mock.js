@@ -27,7 +27,7 @@ export const socialLinks = {
 export const aboutContent = {
   intro: "Hey there! I'm Vani, a passionate Full Stack Developer based in Bhopal, India.",
   story: "During my internship at Innobimb Infotech, I discovered the joy of building complete applications from scratch. From crafting pixel-perfect interfaces to architecting robust backend systems, I love every part of the development journey.",
-  passion: "When I'm not coding, you'll find me exploring new technologies, solving DSA problems, or thinking about how tech can make healthcare more accessible."
+  passion: "When I'm not coding, you'll find me exploring new technologies, solving DSA problems, or exploring tech world "
 };
 
 export const skills = {
