@@ -58,7 +58,7 @@ const Projects = () => {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <p className=" text-pink-500 reveal opacity-0 translate-y-8 transition-all duration-700  text-pink-500  font-medium mb-4">
+          <p className=" reveal opacity-0 translate-y-8 transition-all duration-700  text-pink-500  font-medium mb-4">
             MY PORTFOLIO
           </p>
           <h2
