@@ -19,32 +19,24 @@ export const personalInfo = {
 };
 
 export const socialLinks = {
-  linkedin: "https://www.linkedin.com/in/vani-narwani-50a239274/",
+  linkedin: "https://www.linkedin.com/in/vani-narwani-50a239274/?skipRedirect=true",
   github: "https://github.com/VaniNarwani23",
   email: "mailto:vaninarwani@gmail.com"
 };
 
 export const aboutContent = {
-  intro: "Hey there! I'm Vani, a passionate Full Stack Developer based in Bhopal, India.",
-  story: "During my internship at Innobimb Infotech, I discovered the joy of building complete applications from scratch. From crafting pixel-perfect interfaces to architecting robust backend systems, I love every part of the development journey.",
-  passion: "When I'm not coding, you'll find me exploring new technologies, solving DSA problems, or exploring tech world "
+  intro: "Hey there! I'm Vani, a creative Full Stack Developer based in Bhopal, India.",
+  story: "I have experience in building real-world web applications through internships and personal projects. I enjoy learning by building setting up projects, solving problems, and figuring things out along the way. This hands-on approach has helped me grow as a developer and understand how to create scalable and efficient applications.",
+  passion: "Alongside development, I actively practice data structures and algorithms to strengthen my problem-solving skills. I'm passionate about crafting modern web experiences, exploring new technologies, and continuously improving. Currently open to new opportunities to learn, build, and contribute."
 };
 
 export const skills = {
-  frontend: [
-    { name: "React.js", level: 100 },
-    { name: "TypeScript", level: 100 },
-    { name: "Tailwind CSS", level: 100 },
-    { name: "GSAP", level: 100 },
-    { name: "JavaScript", level: 100 }
-  ],
-  backend: [
-    { name: "Node.js", level: 100 },
-    { name: "MongoDB", level: 100 },
-    { name: "REST APIs", level: 100 },
-    { name: "Python", level: 100 }
-  ],
-  tools: ["Git & GitHub", "VS Code", "Vite", "Replit", "Selenium", "BS4"]
+  technical: [
+    "HTML", "CSS", "Tailwind CSS", "JavaScript", "TypeScript", "React", "Next.js", "Node.js",
+    "Python", "Java", "SQL", "MongoDB", "Express.js", "Supabase", "BetterAuth", "Clerk",
+    "GSAP", "Git", "GitHub", "BS4", "Selenium", "Data Structures", "API Integration",
+    "Python Full Stack", "Responsive Design"
+  ]
 };
 
 export const softSkills = [
@@ -136,7 +128,7 @@ export const certifications = [
     description: "Comprehensive certification covering modern full-stack development including React, Node.js, MongoDB, and deployment strategies. Completed hands-on projects demonstrating proficiency in building scalable web applications.",
     skills: ["React.js", "Node.js", "MongoDB", "Express.js", "REST APIs"],
     image: int,
-    verifyUrl:"https://drive.google.com/file/d/1pM9dofO0ELPQXTCmI_o7N97X_Bl9Gj1o/view?usp=sharing"
+    verifyUrl: "https://drive.google.com/file/d/1pM9dofO0ELPQXTCmI_o7N97X_Bl9Gj1o/view?usp=sharing"
 
   },
   {
@@ -158,7 +150,7 @@ export const certifications = [
     description: "Learned HTML5, CSS3, Flexbox, CSS Grid, and responsive design principles. Built multiple responsive projects including tribute pages, survey forms, and landing pages.",
     skills: ["HTML5", "CSS3", "Flexbox", "CSS Grid", "Responsive Design"],
     image: Micro,
-    verifyUrl:"https://drive.google.com/file/d/1rHlf-YevOrcxQCnouPatS-WkQQli-8ci/view?usp=sharing"
+    verifyUrl: "https://drive.google.com/file/d/1rHlf-YevOrcxQCnouPatS-WkQQli-8ci/view?usp=sharing"
   },
   {
     id: 4,

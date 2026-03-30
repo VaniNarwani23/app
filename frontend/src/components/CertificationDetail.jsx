@@ -8,8 +8,8 @@ const CertificationDetail = ({ certification }) => {
   }
 
   return (
-    <div className="bg-white dark:bg-gray-800/50 backdrop-blur-xl rounded-3xl overflow-hidden">
-      <div className="relative h-72 overflow-hidden">
+    <div className="bg-white dark:bg-background rounded-3xl overflow-hidden">
+      <div className="relative h-60 sm:h-72 overflow-hidden">
         <img
           src={certification.image}
           alt={certification.title}
@@ -17,53 +17,53 @@ const CertificationDetail = ({ certification }) => {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent" />
         
-        <div className="absolute bottom-6 left-8 flex items-center gap-3">
-          <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center shadow-lg">
-            <Award className="w-8 h-8 text-white" />
+        <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-8 flex items-center gap-3">
+          <div className="w-12 h-12 sm:w-16 sm:h-16 bg-brand rounded-2xl flex items-center justify-center shadow-lg">
+            <Award className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
           </div>
           <div>
-            <p className="text-gray-300 text-sm">Issued by</p>
-            <p className="text-white font-semibold text-lg">{certification.issuer}</p>
+            <p className="text-gray-300 text-xs sm:text-sm">Issued by</p>
+            <p className="text-white font-semibold text-base sm:text-lg">{certification.issuer}</p>
           </div>
         </div>
       </div>
 
-      <div className="p-8 md:p-12">
+      <div className="p-6 sm:p-8 md:p-12">
         <h1
-          className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6"
+          className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6"
           style={{ fontFamily: 'Playfair Display, serif' }}
         >
           {certification.title}
         </h1>
 
-        <div className="flex flex-wrap gap-4 mb-8">
-          <div className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-700/50 rounded-xl">
-            <Calendar className="w-4 h-4 text-pink-500 dark:text-pink-400" />
-            <span className="text-gray-600 dark:text-gray-300 text-sm">Issued: {certification.issueDate}</span>
+        <div className="flex flex-wrap gap-3 sm:gap-4 mb-8">
+          <div className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-100 dark:bg-gray-700/50 rounded-xl">
+            <Calendar className="w-4 h-4 text-brand" />
+            <span className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm">Issued: {certification.issueDate}</span>
           </div>
-          <div className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-700/50 rounded-xl">
+          <div className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-100 dark:bg-gray-700/50 rounded-xl">
             <Shield className="w-4 h-4 text-green-500 dark:text-green-400" />
-            <span className="text-gray-600 dark:text-gray-300 text-sm">ID: {certification.credentialId}</span>
+            <span className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm">ID: {certification.credentialId}</span>
           </div>
         </div>
 
         <div className="mb-8">
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">About This Certification</h2>
-          <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
+          <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
             {certification.description}
           </p>
         </div>
 
         <div className="mb-10">
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Skills Demonstrated</h2>
-          <div className="grid md:grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {certification.skills.map((skill) => (
               <div
                 key={skill}
                 className="flex items-center gap-3 px-4 py-3 bg-gray-100 dark:bg-gray-700/30 rounded-xl"
               >
-                <CheckCircle className="w-5 h-5 text-green-500 dark:text-green-400 flex-shrink-0" />
-                <span className="text-gray-700 dark:text-gray-200">{skill}</span>
+                <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 dark:text-green-400 flex-shrink-0" />
+                <span className="text-gray-700 dark:text-gray-200 text-sm sm:text-base">{skill}</span>
               </div>
             ))}
           </div>
@@ -71,7 +71,7 @@ const CertificationDetail = ({ certification }) => {
 
         <Button
           onClick={() => window.open(certification.verifyUrl, '_blank')}
-          className="w-full bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white py-6 rounded-xl text-base font-medium transition-all"
+          className="w-full bg-brand hover:bg-brand-accent text-brand-foreground py-6 rounded-xl text-base font-medium transition-all"
         >
           <ExternalLink size={20} className="mr-2" />
           Verify Certificate

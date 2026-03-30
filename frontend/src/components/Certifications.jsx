@@ -8,14 +8,14 @@ const CertificateModal = ({ certificate, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4" onClick={onClose}>
-      <div className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white rounded-2xl shadow-2xl w-full max-w-4xl mx-auto border border-gray-200 dark:border-gray-700/50 relative" onClick={(e) => e.stopPropagation()}>
-         <button
+      <div className="bg-white dark:bg-background text-gray-900 dark:text-white rounded-3xl shadow-2xl w-full max-w-4xl mx-auto border border-gray-200 dark:border-gray-700/50 relative overflow-y-auto max-h-[90vh]" onClick={(e) => e.stopPropagation()}>
+        <button 
           onClick={onClose}
-          className="absolute top-4 right-4 z-50 w-10 h-10 bg-gray-100 dark:bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-white/20 transition-all"
+          className="absolute top-4 right-4 p-2 rounded-full bg-black/10 hover:bg-black/20 dark:bg-white/10 dark:hover:bg-white/20 transition-colors z-50"
         >
           <X size={20} />
         </button>
-        <div className="overflow-y-auto max-h-[90vh] p-4 md:p-8">
+        <div className="p-6 md:p-10">
           <div className="mb-6">
             <img
               src={certificate.image}
@@ -38,7 +38,7 @@ const CertificateModal = ({ certificate, onClose }) => {
           </div>
 
           <div className="flex gap-4 mt-8">
-            <Button asChild className="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-lg transition-all">
+            <Button asChild className="bg-brand hover:bg-brand-accent text-brand-foreground font-bold py-3 px-6 rounded-lg transition-all">
               <a href={certificate.verifyUrl} target="_blank" rel="noopener noreferrer">
                 View Certificate <ExternalLink size={16} className="ml-2" />
               </a>
@@ -76,13 +76,13 @@ const Certifications = () => {
     <section
       id="certifications"
       ref={sectionRef}
-      className="py-24 lg:py-32 bg-gray-50 dark:bg-gray-950 relative overflow-hidden"
+      className="py-24 lg:py-32 bg-background relative overflow-hidden"
     >
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-50/20 via-transparent to-pink-50/20 dark:from-purple-950/20 dark:to-pink-950/20" />
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-brand-muted via-transparent to-brand-muted opacity-20" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <p className="reveal opacity-0 translate-y-8 transition-all duration-700 text-pink-500 dark:text-pink-400 font-medium mb-4">
+          <p className="reveal opacity-0 translate-y-8 transition-all duration-700 text-brand font-medium mb-4">
             MY ACHIEVEMENTS
           </p>
           <h2
@@ -105,7 +105,7 @@ const Certifications = () => {
             >
               <div
                 onClick={() => setSelectedCert(cert)}
-                className="group bg-white dark:bg-gray-900/50 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl dark:shadow-gray-900/50 dark:hover:shadow-pink-900/20 transition-all duration-500 cursor-pointer border border-gray-100 dark:border-gray-800/50 h-full flex flex-col"
+                className="group bg-white dark:bg-gray-900/50 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl dark:shadow-gray-900/50 dark:hover:shadow-brand/20 transition-all duration-500 cursor-pointer border border-gray-100 dark:border-gray-800/50 h-full flex flex-col"
               >
                 <div className="relative h-64 overflow-hidden">
                   <img
@@ -127,7 +127,7 @@ const Certifications = () => {
                 </div>
 
                 <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-pink-400 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-brand transition-colors">
                     {cert.title}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-2 flex-grow">
@@ -143,14 +143,14 @@ const Certifications = () => {
                       </span>
                     ))}
                     {cert.skills.length > 3 && (
-                      <span className="px-3 py-1 bg-pink-100 dark:bg-pink-900/50 text-pink-600 dark:text-pink-300 rounded-full text-xs font-medium">
+                      <span className="px-3 py-1 bg-brand-muted text-brand rounded-full text-xs font-medium">
                         +{cert.skills.length - 3} more
                       </span>
                     )}
                   </div>
                   
                   <div className="mt-auto pt-4 border-t border-gray-100 dark:border-gray-700/50">
-                    <div className="flex items-center text-pink-500 dark:text-pink-400 text-sm font-medium group-hover:translate-x-1 transition-transform duration-300">
+                    <div className="flex items-center text-brand text-sm font-medium group-hover:translate-x-1 transition-transform duration-300">
                         View Details
                         <ChevronRight size={16} className="ml-1" />
                     </div>
@@ -165,7 +165,7 @@ const Certifications = () => {
           <a href="https://drive.google.com/file/d/1fFcw-HZBKYwsrDs0rx7raIgpoGT6o0Wf/view" target="_blank" rel="noopener noreferrer">
             <Button
               variant="outline"
-              className="border-2 border-gray-200 dark:border-gray-700 hover:border-pink-300 dark:hover:border-pink-400 text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 px-8 py-6 rounded-full text-base font-medium transition-all hover:shadow-lg group bg-white/30 dark:bg-gray-900/30"
+              className="border-2 border-gray-200 dark:border-gray-700 hover:border-brand text-gray-700 dark:text-gray-300 hover:text-brand px-8 py-6 rounded-full text-base font-medium transition-all hover:shadow-lg group bg-white/30 dark:bg-gray-900/30"
             >
               View All Certificates
               <ChevronRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />

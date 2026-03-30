@@ -10,7 +10,7 @@ const Modal = ({ isOpen, onClose, children }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-70 dark:bg-opacity-80 z-50 flex items-center justify-center p-4">
-      <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl w-full max-w-4xl mx-auto border border-gray-200 dark:border-gray-700/50 relative">
+      <div className="bg-white dark:bg-background/50 backdrop-blur-xl rounded-2xl shadow-2xl w-full max-w-4xl mx-auto border border-gray-200 dark:border-gray-700/50 relative">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 z-50 w-10 h-10 bg-gray-100 dark:bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-white/20 transition-all"
@@ -51,14 +51,14 @@ const Projects = () => {
     <section
       id="projects"
       ref={sectionRef}
-      className="py-24 lg:py-32 bg-gray-50 dark:bg-gray-950 relative overflow-hidden"
+      className="py-24 lg:py-32 bg-background relative overflow-hidden"
     >
-      <div className="absolute top-20 left-0 w-72 h-72 bg-sky-100/50 dark:bg-sky-900/30 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-0 w-96 h-96 bg-cyan-100/30 dark:bg-cyan-900/20 rounded-full blur-3xl" />
+      <div className="absolute top-20 left-0 w-72 h-72 bg-brand-muted opacity-50 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 right-0 w-96 h-96 bg-brand-muted opacity-30 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <p className=" reveal opacity-0 translate-y-8 transition-all duration-700  text-pink-500  font-medium mb-4">
+          <p className=" reveal opacity-0 translate-y-8 transition-all duration-700  text-brand  font-medium mb-4">
             MY PORTFOLIO
           </p>
           <h2
@@ -80,7 +80,7 @@ const Projects = () => {
               style={{ transitionDelay: `${300 + index * 100}ms` }}
             >
               <div
-                className="group bg-white dark:bg-gray-900/50 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl dark:shadow-gray-900/50 dark:hover:shadow-sky-900/20 transition-all duration-500 cursor-pointer border border-gray-100 dark:border-gray-800/50"
+                className="group bg-white dark:bg-background/40 backdrop-blur-sm rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl dark:shadow-background/50 dark:hover:shadow-brand/20 transition-all duration-500 cursor-pointer border border-gray-100 dark:border-gray-800/50"
                 onClick={() => setSelectedProject(project)}
               >
                 <div className="relative h-64 overflow-hidden">
@@ -119,7 +119,7 @@ const Projects = () => {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-sky-400 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-brand transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
@@ -135,13 +135,13 @@ const Projects = () => {
                       </span>
                     ))}
                     {project.tech.length > 4 && (
-                      <span className="px-3 py-1 bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-300 rounded-full text-xs font-medium">
+                      <span className="px-3 py-1 bg-brand-muted text-brand rounded-full text-xs font-medium">
                         +{project.tech.length - 4} more
                       </span>
                     )}
                   </div>
                   
-                  <div className="flex items-center text-sky-500 dark:text-sky-400 text-sm font-medium group-hover:translate-x-1 transition-transform">
+                  <div className="flex items-center text-brand text-sm font-medium group-hover:translate-x-1 transition-transform">
                     View Details
                     <ChevronRight size={16} className="ml-1" />
                   </div>
@@ -155,7 +155,7 @@ const Projects = () => {
           <Link to="https://github.com/VaniNarwani23">
             <Button
               variant="outline"
-              className="border-2 border-gray-200 dark:border-gray-700 hover:border-pink-500 dark:hover:border-sky-400 text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-sky-400 px-8 py-6 rounded-full text-base font-medium transition-all hover:shadow-lg group bg-white/30 dark:bg-gray-900/30"
+              className="border-2 border-gray-200 dark:border-gray-700 hover:border-brand text-gray-700 dark:text-gray-300 hover:text-brand px-8 py-6 rounded-full text-base font-medium transition-all hover:shadow-lg group bg-white/30 dark:bg-gray-900/30"
             >
               View All Projects
               <ChevronRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />

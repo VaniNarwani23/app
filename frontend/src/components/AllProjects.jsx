@@ -6,11 +6,11 @@ import { Button } from './ui/button';
 
 const AllProjects = () => {
   return (
-    <section className="py-24 lg:py-32 bg-gray-50 dark:bg-gray-950 relative overflow-hidden">
+    <section className="py-24 lg:py-32 bg-background relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <Link to="/" className="inline-block mb-8">
-            <Button variant="outline" className="border-2 border-gray-200 dark:border-gray-700 hover:border-sky-300 dark:hover:border-sky-400 text-gray-700 dark:text-gray-300 hover:text-sky-600 dark:hover:text-sky-400 px-6 py-3 rounded-full text-base font-medium transition-all hover:shadow-lg group bg-white/30 dark:bg-gray-900/30">
+            <Button variant="outline" className="border-2 border-gray-200 dark:border-gray-700 hover:border-brand text-gray-700 dark:text-gray-300 hover:text-brand px-6 py-3 rounded-full text-base font-medium transition-all hover:shadow-lg group bg-white/30 dark:bg-gray-900/30">
               <ChevronLeft size={18} className="mr-2 group-hover:-translate-x-1 transition-transform" />
               Back to Home
             </Button>
@@ -25,7 +25,7 @@ const AllProjects = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <div key={project.id} className="group bg-white dark:bg-gray-900/50 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl dark:shadow-gray-900/50 dark:hover:shadow-sky-900/20 transition-all duration-500 border border-gray-100 dark:border-gray-800/50">
+            <div key={project.id} className="group bg-white dark:bg-background/40 backdrop-blur-sm rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl dark:shadow-gray-900/50 dark:hover:shadow-brand/20 transition-all duration-500 border border-gray-100 dark:border-gray-800/50">
               <div className="relative h-64 overflow-hidden">
                 <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
@@ -44,7 +44,7 @@ const AllProjects = () => {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-sky-400 transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-brand transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">

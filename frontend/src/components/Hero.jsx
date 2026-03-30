@@ -50,31 +50,31 @@ const Hero = () => {
     <section
       id="home"
       ref={heroRef}
-      className="min-h-screen flex items-center justify-center relative overflow-hidden dark:bg-gray-900 relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background"
     >
       {/* Decorative Elements */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-sky-200/30 dark:bg-sky-900/30 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-200/20 dark:bg-cyan-900/20 rounded-full blur-3xl animate-pulse delay-1000" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-sky-100/20 to-cyan-100/20 dark:from-sky-900/20 dark:to-cyan-900/20 rounded-full blur-3xl" />
+      <div className="absolute top-20 left-10 w-72 h-72 bg-brand/10 rounded-full blur-[100px] animate-pulse" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-brand-accent/5 rounded-full blur-[100px] animate-pulse delay-1000" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-muted opacity-20 rounded-full blur-[120px]" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-32 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="space-y-8 text-center lg:text-left">
             <div className="reveal opacity-0 translate-y-8 transition-all duration-700">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-pink-100/60 dark:bg-sky-900/60 rounded-full text-white-600 dark:text-white-300 text-sm font-medium mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-muted border border-brand/20 rounded-full text-brand text-sm font-medium mb-6">
                 <Sparkles size={16} />
                 <span>Available for opportunities</span>
               </div>
             </div>
 
             <h1
-              className="reveal opacity-0 translate-y-8 transition-all duration-700 delay-100 text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-gray-100 leading-tight"
+              className="reveal opacity-0 translate-y-8 transition-all duration-700 delay-100 text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-gray-100 leading-tight"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
               Hello, I'm{' '}
               <span className="relative">
-                <span className="text-pink bg-clip-text bg-gradient-to-r from-pink-500 to-cyan-500">
+                <span className="text-brand">
                   {personalInfo.firstName}
                 </span>
                 <svg
@@ -84,7 +84,7 @@ const Hero = () => {
                 >
                   <path
                     d="M2 10C50 2 150 2 198 10"
-                    className="stroke-pink-500 dark:stroke-blue-500"
+                    className="stroke-brand"
                     strokeWidth="3"
                     strokeLinecap="round"
                   />
@@ -93,13 +93,13 @@ const Hero = () => {
             </h1>
 
             <div
-              className="reveal opacity-0 translate-y-8 transition-all duration-700 delay-200 text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-medium"
+              className="reveal opacity-0 translate-y-8 transition-all duration-700 delay-200 text-lg md:text-2xl text-gray-600 dark:text-gray-300 font-medium"
               style={{ fontFamily: 'Figtree, sans-serif' }}
             >
               <span id="element"></span>
             </div>
 
-            <p className="reveal opacity-0 translate-y-8 transition-all duration-700 delay-300 text-gray-500 dark:text-gray-400 text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            <p className="reveal opacity-0 translate-y-8 transition-all duration-700 delay-300 text-gray-500 dark:text-gray-400 text-base md:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
               {personalInfo.description}
             </p>
 
@@ -123,21 +123,19 @@ const Hero = () => {
           {/* Avatar/Image */}
           <div className="reveal opacity-0 translate-y-8 transition-all duration-700 delay-500 flex justify-center lg:justify-end">
             <div className="relative">
-              {/* Decorative ring */}
-              <div className="absolute inset-0 bg-pink-400  rounded-full blur-2xl opacity-30 dark:bg-gradient-to-r from-sky-400 opacity-20 animate-pulse" />
+              {/* Decorative ring/glow */}
+              <div className="absolute inset-0 bg-brand rounded-full blur-3xl opacity-20 animate-pulse" />
               
               {/* Main avatar container */}
-              <div className="relative w-72 h-72 md:w-96 md:h-96">
-                <div className="absolute inset-0 bg-pink-200  dark:bg-sky-500  rounded-full" />
+              <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-96 md:h-96">
+                <div className="absolute inset-0 bg-brand opacity-10 rounded-full" />
+                <div className="absolute inset-0 border-4 border-brand-accent/30 rounded-full animate-spin-slow" />
                 <img
                   src={personalInfo.avatar}
                   alt={personalInfo.name}
-                  className="relative w-full h-full object-cover rounded-full p-2"
+                  className="relative w-full h-full object-cover rounded-full p-3"
                 />
               </div>
-
-         
-           
             </div>
           </div>
         </div>

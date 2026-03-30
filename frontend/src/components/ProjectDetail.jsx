@@ -8,8 +8,8 @@ const ProjectDetail = ({ project }) => {
   }
 
   return (
-    <div className="bg-white dark:bg-gray-800/50 backdrop-blur-xl rounded-3xl overflow-hidden">
-      <div className="relative h-80 overflow-hidden">
+    <div className="bg-white dark:bg-background rounded-3xl overflow-hidden shadow-xl">
+      <div className="relative h-60 sm:h-80 overflow-hidden">
         <img
           src={project.image}
           alt={project.title}
@@ -20,7 +20,7 @@ const ProjectDetail = ({ project }) => {
 
       <div className="p-8 md:p-12">
         <div className="mb-6">
-          <span className="inline-block px-3 py-1 bg-pink-100 dark:bg-pink-500/20 text-pink-600 dark:text-pink-400 rounded-full text-sm font-medium mb-4">
+          <span className="inline-block px-3 py-1 bg-brand-muted text-brand rounded-full text-sm font-medium mb-4">
             {project.category}
           </span>
           <h1
@@ -46,7 +46,7 @@ const ProjectDetail = ({ project }) => {
                 key={idx}
                 className="flex items-start gap-3 text-gray-600 dark:text-gray-300"
               >
-                <ChevronRight size={18} className="text-pink-500 dark:text-pink-400 mt-1 flex-shrink-0" />
+                <ChevronRight size={18} className="text-brand mt-1 flex-shrink-0" />
                 {feature}
               </li>
             ))}
@@ -59,7 +59,7 @@ const ProjectDetail = ({ project }) => {
             {project.tech.map((tech) => (
               <span
                 key={tech}
-                className="px-4 py-2 bg-purple-100 dark:bg-purple-500/20 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium border border-purple-200 dark:border-purple-500/30 hover:bg-purple-200 dark:hover:bg-purple-500/30 transition-colors cursor-default"
+                className="px-4 py-2 bg-brand-muted text-brand rounded-full text-sm font-medium border border-brand/20 hover:bg-brand/10 transition-colors cursor-default"
               >
                 {tech}
               </span>
@@ -77,7 +77,7 @@ const ProjectDetail = ({ project }) => {
           </Button>
           <Button
             onClick={() => window.open(project.live, '_blank')}
-            className="flex-1 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white py-6 rounded-xl text-base font-medium transition-all"
+            className="flex-1 bg-brand hover:bg-brand-accent text-brand-foreground py-6 rounded-xl text-base font-medium transition-all"
           >
             <ExternalLink size={20} className="mr-2" />
             View Live

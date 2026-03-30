@@ -29,7 +29,7 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-sm'
+          ? 'bg-white/90 dark:bg-background/90 backdrop-blur-md shadow-sm'
           : 'bg-transparent'
       }`}
     >
@@ -38,11 +38,11 @@ const Navbar = () => {
           {/* Logo */}
           <button
             onClick={() => scrollToSection('#home')}
-            className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white hover:text-pink-500 transition-colors"
+            className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white hover:text-brand transition-colors"
             style={{ fontFamily: 'Playfair Display, serif' }}
           >
             {personalInfo.firstName} {personalInfo.lastName}
-            <span className="text-pink-400">.</span>
+            <span className="text-brand">.</span>
           </button>
 
           {/* Desktop Navigation */}
@@ -54,7 +54,7 @@ const Navbar = () => {
                 className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors relative group"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-pink-400 transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand transition-all duration-300 group-hover:w-full" />
               </button>
             ))}
             <Button
@@ -82,7 +82,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-20 left-0 right-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg transition-all duration-300 ${
+        className={`md:hidden absolute top-20 left-0 right-0 bg-white/95 dark:bg-background/95 backdrop-blur-md shadow-lg transition-all duration-300 ${
           isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
       >

@@ -1,5 +1,12 @@
 {
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "yarn --cwd frontend start"
+  },
   "dependencies": {
     "typed.js": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/stack-utils": "^2.0.3"
   }
 }
