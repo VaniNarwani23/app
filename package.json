@@ -1,4 +1,9 @@
 {
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
   "scripts": {
     "start": "npm run dev",
     "dev": "yarn --cwd frontend start",
