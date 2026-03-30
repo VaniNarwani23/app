@@ -1,0 +1,6 @@
+{
+  "buildCommand": "yarn build",
+  "installCommand": "yarn install",
+  "framework": "create-react-app",
+  "rootDirectory": "frontend"
+}

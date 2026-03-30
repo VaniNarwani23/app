@@ -1,7 +1,8 @@
 {
   "scripts": {
     "start": "npm run dev",
-    "dev": "yarn --cwd frontend start"
+    "dev": "yarn --cwd frontend start",
+    "build": "yarn --cwd frontend build"
   },
   "dependencies": {
     "typed.js": "^2.1.0"
