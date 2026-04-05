@@ -15,7 +15,7 @@ export const personalInfo = {
   avatar: avatar,
   location: "Bhopal, India",
   email: "vaninarwani@gmail.com",
-  resumeUrl: "https://drive.google.com/file/d/1nIc5oQTE4uvmCNm08uxBXKb30SyhUT5m/view?usp=sharing"
+  resumeUrl: "/Vani_Narwani.pdf"
 };
 
 export const socialLinks = {
