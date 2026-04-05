@@ -58,7 +58,7 @@ export const projects = [
     image: ecom,
     tech: ["React.js", "Tailwind CSS", "Node.js", "MongoDB", "JavaScript", "Git"],
     github: "https://github.com/VaniNarwani23/TheEcomStore",
-    live: "https://theecomstorebyvani.netlify.app/",
+    live: "https://the-ecom-store-by-vani.vercel.app/",
     features: [
       "Responsive design across all devices",
       "Dynamic product filtering & search",
